@@ -1,0 +1,32 @@
+import java.util.*;
+public class Rev
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    System.out.println("Enter the line");
+	    String str=sc.nextLine();
+	    str=str+' ';
+	    
+	    int i,j,l;
+	    String str2="",str1="";
+	    l=str.length();
+	    
+	    for(i=0;i<l;i++)
+	    {
+	        char chr=str.charAt(i);
+	        if(chr==' ')
+	        {
+	            int n=str1.length();
+	            for(j=n;j>0;j--)
+	            {
+	                str2+=str1;
+	                str1="";
+	            }
+	            str2+=' ';
+	        }
+	        else
+	        str1=chr+str1;
+	    }
+	    System.out.println(str2);
+	}
+}
